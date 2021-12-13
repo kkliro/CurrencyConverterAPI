@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<dbconnection>
+	<host>localhost</host>
+	<user>root</user>
+	<password></password>
+	<dbname>currencyconversiondb</dbname>
+</dbconnection>

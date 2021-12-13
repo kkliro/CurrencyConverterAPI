@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /CurrencyConverterAPI/CurrencyConversionService/api/
+RewriteRule ^/?([a-z]+)/(.*)$ index.php?$1=$2 [QSA]
