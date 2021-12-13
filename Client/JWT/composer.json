@@ -1,0 +1,6 @@
+{
+    "require": {
+        "firebase/php-jwt": "^5.5",
+        "laminas/laminas-config": "^3.7"
+    }
+}
