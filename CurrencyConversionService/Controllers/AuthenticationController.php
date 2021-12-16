@@ -1,6 +1,6 @@
 <?php
 	
-require_once("../api/jwt.php");
+require_once("../Token/jwt.php");
 require_once("ConversionController.php");
 
 class AuthenticationController{
@@ -24,6 +24,20 @@ class AuthenticationController{
         $client = $client->findClientID($licenseKey);
         return $client->getClientID();
     }
+
+   	function authenticateToken($tokenHash){
+   		try {
+            $token = JWT::decode($tokenHash, $this->secretKey);
+            if ($token->exp >= time()) {
+               return true;
+            }
+            else{
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+   	}
 
 }
 
