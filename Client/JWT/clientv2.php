@@ -11,7 +11,7 @@ $data = json_encode($data);
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL,"http://localhost/CurrencyConverterAPI/CurrencyConversionService/api/authentication/");
-curl_setopt($ch,CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 curl_setopt($ch,CURLOPT_POSTFIELDS, $data);
 
 curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
@@ -36,7 +36,7 @@ if (!array_key_exists("Token", $token)){
 }
 
 curl_setopt($ch, CURLOPT_URL,"http://localhost/CurrencyConverterAPI/CurrencyConversionService/api/conversion/");
-
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type:application/json',
     'Accept:application/json',

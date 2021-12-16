@@ -86,7 +86,7 @@ if(class_exists($controllerName)){
             }
         }
         else if ($className == "Authentication"){
-            if ($request->verb == "POST"){
+            if ($request->verb == "GET"){
                 $controller = new $controllerName();
                 $data = json_decode(file_get_contents("php://input"));
                 $token = $controller->generateToken($data);
