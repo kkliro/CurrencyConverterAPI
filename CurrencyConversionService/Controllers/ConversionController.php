@@ -35,12 +35,6 @@ class ConversionController
         
     }
 
-    function getClientID($licenseKey){
-        $client = new Client();
-        $client = $client->findClientID($licenseKey);
-        return $client->getClientID();
-    }
-
     function convert($amount){
     	$conversion = $amount + 20;
     	return $conversion;

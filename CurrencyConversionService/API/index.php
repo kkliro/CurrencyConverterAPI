@@ -25,7 +25,7 @@ $response = new Response();
         $className = ucfirst($keys[0]);
         $controllerName = ucfirst($keys[0]).'Controller';
 
-        if(class_exists($controllerName) ){
+        if(class_exists($controllerName)){
             
             if ($request->accept == "application/json"){
                 if($className == "Client")
@@ -75,23 +75,18 @@ $response = new Response();
                                 $response->payload = json_encode($responseArgs);
                             }
 
-                        }
-                        else{
-                            $token = array();
-                            $token['id'] = $controller->getClientID($data->licenseKey); 
-                            $token['exp'] = time() + 3600;
-
-                            $tokenHash = JWT::encode($token, $secretKey);
-                            $tokenResponse = json_encode(["Token" => $tokenHash]);
-
-                            $response->payload = $tokenResponse;
-                        }
+                        }                        
                     }   
                 }
+                else if ($className == "Authentication"){
+                    if ($request->verb == "POST"){
+                        $controller = new $controllerName();
+                        $data = json_decode(file_get_contents("php://input"));
+                        $token = $controller->generateToken($data);
+                        $response->payload = $token; 
+                    }
+                }
             }
-
         }
         echo $response->payload;
-
-
 ?>
