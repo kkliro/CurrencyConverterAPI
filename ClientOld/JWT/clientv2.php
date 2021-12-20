@@ -20,7 +20,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Accept:application/json',
     'Content-Length:' . strlen($data),
 ));
-//execute post
+
 $token = curl_exec($ch);
 
 var_dump($token);
