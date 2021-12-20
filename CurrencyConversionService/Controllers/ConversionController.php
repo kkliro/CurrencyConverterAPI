@@ -30,7 +30,6 @@ class ConversionController
             $conversion->insert();
 
             return $convertedAmount;        
-
         }
         
     }

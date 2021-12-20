@@ -1,5 +1,6 @@
 <?php
 require_once("../Database/ConnectionManager.php");
+require_once("../Logs/LogHandler.php");
 
 class Conversion
 {
@@ -86,9 +87,14 @@ class Conversion
 		$query = "INSERT INTO conversion(clientID,requestDate,completionDate,originalCurrency,convertedCurrency,originalAmount,convertedAmount)
 		 Values (:clientID,:requestDate,:completionDate,:originalCurrency,:convertedCurrency,:originalAmount,:convertedAmount)";
 		$stmt = $this->dbConnection->prepare($query);
-		$stmt->execute(['clientID'=>$this->clientID,'requestDate'=>$this->requestDate,'completionDate'=>$this->completionDate,
+		$success = $stmt->execute(['clientID'=>$this->clientID,'requestDate'=>$this->requestDate,'completionDate'=>$this->completionDate,
 		'originalCurrency'=>$this->originalCurrency,'convertedCurrency'=>$this->convertedCurrency,'originalAmount'=>$this->originalAmount,'convertedAmount'=>$this->convertedAmount]);
-
+		if ($success){
+			LogHandler::write("Successfully added conversion to database.", "INFO");
+		}
+		else{
+			LogHandler::write("Failed to upload conversion to database.", "ERROR");
+		}
 	}
 }
 
