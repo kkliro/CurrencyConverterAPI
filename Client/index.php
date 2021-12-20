@@ -107,9 +107,12 @@
 			<div class='container center_div'>
 				<p class='text-left'>
 					Converted $" . $_POST['originalAmount'] . " " . $_POST['originalCurrency'] . " to $" . $result['ConvertedAmount'] . " " . $_POST['convertedCurrency'] . "
+					<br><br>
+					<img src='". $result['originalFlagLink'] ."'> ==>
+					<img src='". $result['convertedFlagLink'] ."'>
 				</p>
 			</div>
-	";
+		";
 	}
 	?>
 </body>
