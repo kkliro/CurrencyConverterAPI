@@ -1,3 +1,6 @@
-[2021-12-19 11:29:46pm] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
-[2021-12-19 11:29:46pm] - [INFO] - Authenticated user [ID: 1].
-[2021-12-19 11:29:46pm] - [INFO] - Successfully added conversion to database.
+
+[2021-12-19 11:43:23pm] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-19 11:43:23pm] - [INFO] - Authenticated user [ID: 1].
+[2021-12-19 11:43:23pm] - [INFO] - Updated real-time exchanges rates...
+[2021-12-19 11:43:23pm] - [INFO] - Converted USD -> CAD
+[2021-12-19 11:43:23pm] - [INFO] - Successfully added conversion to database.
