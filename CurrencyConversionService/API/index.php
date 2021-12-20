@@ -68,13 +68,13 @@ if(class_exists($controllerName)){
                 $isValid = $authenticator->authenticateToken($matches[1]);
                 
                 if ($isValid){
-                    $convertedAmount = $controller->add($data->licenseKey,$data->originalCurrency,$data->convertedCurrency,$data->originalAmount);
+                    $convertedData = $controller->add($data->licenseKey,$data->originalCurrency,$data->convertedCurrency,$data->originalAmount);
                     $response->statusCode = 201;
                     $response->message = "Created";
 
-                    $responseArgs = array('Status'=>$response->statusCode, 'Message'=>$response->message, 'ConvertedAmount'=>$convertedAmount);
+                    $responseArgs = array('Status'=>$response->statusCode, 'Message'=>$response->message, 'ConvertedAmount'=>$convertedData['convertedAmount'], 'originalFlagLink'=>$convertedData['originalFlagLink'], 'convertedFlagLink'=>$convertedData['convertedFlagLink']);
 
-                    $response->payload = json_encode($responseArgs);
+                    $response->payload = json_encode($responseArgs, JSON_UNESCAPED_SLASHES);
                 }
                 else{
                     $response->statusCode = 401;

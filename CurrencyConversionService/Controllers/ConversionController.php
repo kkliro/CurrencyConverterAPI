@@ -2,6 +2,7 @@
 require_once("../Models/Conversion.php");
 require_once("../Models/Client.php");
 require_once("../Logs/LogHandler.php");
+require_once("../CDN/AWSHandler.php");
 
 class ConversionController
 {
@@ -21,16 +22,16 @@ class ConversionController
             $conversion->setOriginalAmount($originalAmount);
             $conversion->setConvertedCurrency($convertedCurrency);
 
-            $convertedAmount = $this->convert($originalCurrency, $convertedCurrency, $originalAmount);
+            $convertedData = $this->convert($originalCurrency, $convertedCurrency, $originalAmount);
 
-            $conversion->setConvertedAmount($convertedAmount);
+            $conversion->setConvertedAmount($convertedData['convertedAmount']);
 
             $date = date('Y-m-d');
             $conversion->setCompletionDate($date);
 
             $conversion->insert();
 
-            return $convertedAmount;        
+            return $convertedData;        
         }
         
     }
@@ -48,15 +49,20 @@ class ConversionController
         $exchangeRates = json_decode($json, true);
 
         LogHandler::write("Updated real-time exchanges rates...", "INFO");
-
         LogHandler::write("Converted {$originalCurrency} -> {$convertedCurrency}", "INFO");
+
+        AWSHandler::Upload($originalCurrency);
+        $originalFlagLink = AWSHandler::Fetch($originalCurrency);
+
+        AWSHandler::Upload($convertedCurrency);
+        $convertedFlagLink = AWSHandler::Fetch($convertedCurrency);
 
         $originalCurrency = $exchangeRates['rates'][$originalCurrency];
         $convertedCurrency = $exchangeRates['rates'][$convertedCurrency];
 
     	$convert = ($convertedCurrency / $originalCurrency) * $originalAmount;
 
-    	return $convert = round($convert, 2);
+    	return ["convertedAmount"=>round($convert, 2), "originalFlagLink"=>$originalFlagLink, "convertedFlagLink"=>$convertedFlagLink];
     }
 
 }
