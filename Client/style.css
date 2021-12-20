@@ -1,0 +1,28 @@
+.form-control {
+    width: 100%;
+    text-align: center;
+}
+
+.form-group {    
+    text-align: center;
+}
+
+.center_div {
+    margin: 0 auto;
+    width: 25%;
+    text-align: center;
+}
+
+.text-left {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: #adb5bd;
+}
+
+body {
+    background-color: #ced4da;
+}
