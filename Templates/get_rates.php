@@ -12,12 +12,11 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Store the data:
 $json = curl_exec($ch);
-var_dump($json);
 curl_close($ch);
 
 // Decode JSON response:
 $exchangeRates = json_decode($json, true);
 
 // Access the exchange rate values, e.g. GBP:
-echo $exchangeRates['rates'];
+var_dump($exchangeRates['rates']);
 ?>
