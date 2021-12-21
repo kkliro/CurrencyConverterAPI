@@ -141,3 +141,23 @@
 [2021-12-20 10:30:45pm] - [INFO] - Updated real-time exchanges rates...
 [2021-12-20 10:30:45pm] - [INFO] - Converted USD -> CAD
 [2021-12-20 10:30:46pm] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:04:19am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:04:19am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:04:19am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:04:19am] - [INFO] - Converted CAD -> GBP
+[2021-12-21 12:04:21am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:04:36am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:04:36am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:04:37am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:04:37am] - [INFO] - Converted CAD -> GBP
+[2021-12-21 12:04:37am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:04:46am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:04:46am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:04:46am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:04:46am] - [INFO] - Converted EUR -> CAD
+[2021-12-21 12:04:46am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:05:05am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:05:05am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:05:05am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:05:05am] - [INFO] - Converted HKD -> USD
+[2021-12-21 12:05:06am] - [INFO] - Successfully added conversion to database.

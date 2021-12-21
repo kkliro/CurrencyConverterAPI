@@ -1,6 +1,6 @@
 <?php
 $data = [
-    'licenseKey' => "KEYABC123",
+    // 'licenseKey' => "KEYABC123",
     'originalCurrency' => 'USD',
     'convertedCurrency' => 'CAD',
     'originalAmount'   => 11,
