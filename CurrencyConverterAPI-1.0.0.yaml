@@ -1,86 +1,86 @@
----
-swagger: "2.0"
+swagger: '2.0'
 info:
-  description: This is Currency Convert API.
+  description: This is the Currency Conversion API.
   version: 1.0.0
   title: Currency Convert API
+  # put the contact info for your development or API team
   contact:
     email: conversionco@gmail.com
+
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-host: virtserver.swaggerhub.com
-basePath: /konstantinklir/CurrencyConverterAPI/1.0.0
+
+# tags are used for organizing operations
 tags:
 - name: Developers
   description: Operations available to regular developers
-schemes:
-- https
+
 paths:
   /CurrencyConverterAPI/CurrencyConversionService/api/authentication/:
     get:
       tags:
       - Developers
       summary: Generates JWT Token
+      operationId: authToken
       description: |
         By passing the api license key, the controller will issue a JWT token with an expiration date.
-      operationId: authToken
       produces:
       - application/json
       parameters:
-      - name: licenseKey
-        in: query
+      - in: query
+        name: licenseKey
         description: Pass the api license key.
         required: true
         type: string
       responses:
-        "200":
+        200:
           description: Valid license key and JWT token was generated.
           schema:
             type: array
             items:
               $ref: '#/definitions/Client'
-        "500":
+        500:
           description: Bad input parameter.
   /CurrencyConverterAPI/CurrencyConversionService/api/convert/:
     post:
       tags:
       - Developers
       summary: Converts provided amount of money
+      operationId: conversionOp
       description: |
         A POST request is made to the API, passing the correct parameters in order to compute a currency conversion.
-      operationId: conversionOp
       produces:
       - application/json
       parameters:
-      - name: licenseKey
-        in: query
+      - in: query
+        name: licenseKey
         description: Pass the api license key.
         required: true
         type: string
-      - name: originalCurrency
-        in: query
+      - in: query
+        name: originalCurrency
         description: Pass the original currency.
         required: true
         type: string
-      - name: originalAmount
-        in: query
+      - in: query
+        name: originalAmount
         description: Pass the amount of money in the original currency.
         required: true
         type: string
-      - name: convertedCurrency
-        in: query
+      - in: query
+        name: convertedCurrency
         description: Pass the converted currency type.
         required: true
         type: string
       responses:
-        "201":
+        201:
           description: Conversion successful and conversion files successfully created.
           schema:
             type: array
             items:
               $ref: '#/definitions/Conversion'
-        "401":
+        401:
           description: Unauthorized user or missing headers.
 definitions:
   Client:
@@ -88,10 +88,10 @@ definitions:
     required:
     - clientID
     - clientName
-    - licenseEndDate
-    - licenseKey
     - licenseNumber
     - licenseStartDate
+    - licenseEndDate
+    - licenseKey
     properties:
       clientID:
         type: integer
@@ -106,38 +106,38 @@ definitions:
       licenseStartDate:
         type: string
         format: date
-        example: 2020-07-30T00:00:00.000+0000
+        example: 2020-07-30
       licenseEndDate:
         type: string
         format: date
-        example: 2021-09-30T00:00:00.000+0000
+        example: 2021-09-30
       licenseKey:
         type: string
         format: uuid
         example: KEYABC123
   Conversion:
     required:
-    - clientID
-    - completionDate
     - conversionID
-    - convertedAmount
+    - clientID
+    - requestDate
+    - completionDate
+    - originalCurrency
     - convertedCurrency
     - originalAmount
-    - originalCurrency
-    - requestDate
+    - convertedAmount
     properties:
       conversionID:
         type: integer
         example: 15
       clientID:
         type: integer
-        example: 1
+        example:  1
       requestDate:
         type: string
-        example: 2021-07-28T00:00:00.000+0000
+        example: 2021-07-28
       completionDate:
         type: string
-        example: 2021-09-28T00:00:00.000+0000
+        example: 2021-09-28
       originalCurrency:
         type: string
         example: USD
@@ -150,3 +150,8 @@ definitions:
       convertedAmount:
         type: number
         example: 18.44
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /konstantinklir/CurrencyConverterAPI/1.0.0
+schemes:
+ - https

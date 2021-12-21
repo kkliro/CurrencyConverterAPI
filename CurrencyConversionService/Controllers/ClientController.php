@@ -9,6 +9,12 @@
 			$clients = $client->getAllClients();
 			return $clients;
 		}
+
+		function getClientID($licenseKey){
+			$client = new Client();
+	        $client = $client->findClientID($licenseKey);
+	        return $client->getClientID();
+		}
 		
 	}
 

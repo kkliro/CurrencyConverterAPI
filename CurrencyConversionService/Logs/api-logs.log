@@ -102,3 +102,42 @@
 [2021-12-20 05:28:48pm] - [INFO] - Updated real-time exchanges rates...
 [2021-12-20 05:28:48pm] - [INFO] - Converted CAD -> JPY
 [2021-12-20 05:28:51pm] - [INFO] - Successfully added conversion to database.
+[2021-12-20 09:53:42pm] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-20 09:53:42pm] - [INFO] - Authenticated user [ID: 1].
+[2021-12-20 09:53:42pm] - [INFO] - Updated real-time exchanges rates...
+[2021-12-20 09:53:42pm] - [INFO] - Converted USD -> CAD
+[2021-12-20 09:53:48pm] - [INFO] - Successfully added conversion to database.
+[2021-12-20 10:19:58pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:24pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:25pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:25pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:25pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:25pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:39pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:39pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:40pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:40pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:40pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:40pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:41pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:41pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:41pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:41pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:41pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:42pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:42pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:42pm] - [ERROR] - No license key provided.
+[2021-12-20 10:21:42pm] - [ERROR] - No license key provided.
+[2021-12-20 10:22:30pm] - [ERROR] - No license key provided.
+[2021-12-20 10:24:16pm] - [ERROR] - No license key provided.
+[2021-12-20 10:24:58pm] - [ERROR] - No license key provided.
+[2021-12-20 10:25:06pm] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-20 10:25:06pm] - [INFO] - Authenticated user [ID: 1].
+[2021-12-20 10:25:06pm] - [INFO] - Updated real-time exchanges rates...
+[2021-12-20 10:25:06pm] - [INFO] - Converted USD -> CAD
+[2021-12-20 10:25:07pm] - [INFO] - Successfully added conversion to database.
+[2021-12-20 10:30:45pm] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-20 10:30:45pm] - [INFO] - Authenticated user [ID: 1].
+[2021-12-20 10:30:45pm] - [INFO] - Updated real-time exchanges rates...
+[2021-12-20 10:30:45pm] - [INFO] - Converted USD -> CAD
+[2021-12-20 10:30:46pm] - [INFO] - Successfully added conversion to database.

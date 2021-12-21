@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 
 class AWSHandler{
 	
-	public static function Upload($countryCode){
+	public static function upload($countryCode){
 		$config = simplexml_load_file(dirname(__DIR__).'/CDN/aws_config.xml');
 
 		$bucket = $config->bucket;
@@ -29,7 +29,7 @@ class AWSHandler{
 		]);
 	}
 
-	public static function Fetch($countryCode){
+	public static function fetch($countryCode){
 		$config = simplexml_load_file(dirname(__DIR__).'/CDN/aws_config.xml');
 
 		$bucket = $config->bucket;
@@ -54,10 +54,6 @@ class AWSHandler{
 
 		    $request = $s3->createPresignedRequest($cmd, '+120 seconds');
 			$presignedUrl = (string)$request->getUri();
-
-			// var_dump($presignedUrl);
-
-			// echo "<a href=$presignedUrl>Download File</a><br>";
 
 		   	return $presignedUrl;
 		} catch (S3Exception $e) {

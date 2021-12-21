@@ -51,11 +51,11 @@ class ConversionController
         LogHandler::write("Updated real-time exchanges rates...", "INFO");
         LogHandler::write("Converted {$originalCurrency} -> {$convertedCurrency}", "INFO");
 
-        AWSHandler::Upload($originalCurrency);
-        $originalFlagLink = AWSHandler::Fetch($originalCurrency);
+        AWSHandler::upload($originalCurrency);
+        $originalFlagLink = AWSHandler::fetch($originalCurrency);
 
-        AWSHandler::Upload($convertedCurrency);
-        $convertedFlagLink = AWSHandler::Fetch($convertedCurrency);
+        AWSHandler::upload($convertedCurrency);
+        $convertedFlagLink = AWSHandler::fetch($convertedCurrency);
 
         $originalCurrency = $exchangeRates['rates'][$originalCurrency];
         $convertedCurrency = $exchangeRates['rates'][$convertedCurrency];

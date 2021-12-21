@@ -11,6 +11,12 @@ class AuthenticationController{
 
 	function generateToken($data){
 		$token = array();
+
+		if (!isset($data->licenseKey)){
+			LogHandler::write("No license key provided.", "ERROR");
+			return json_encode(["Token" => null]);
+		}
+
 	    $token['id'] = $this->getClientID($data->licenseKey); 
 	    $token['exp'] = time() + $this->expirationDate;
 
@@ -20,12 +26,12 @@ class AuthenticationController{
 	    LogHandler::write("Generated Token for [ID: ". $token['id'] . ", License Key: " . $data->licenseKey . "].", "INFO");
 
 	  	return $tokenResponse;
+		
 	}
 
 	function getClientID($licenseKey){
-        $client = new Client();
-        $client = $client->findClientID($licenseKey);
-        return $client->getClientID();
+       $clientController = new ClientController();
+       return $clientController->getClientID($licenseKey);
     }
 
    	function authenticateToken($tokenHash){
