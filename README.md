@@ -8,36 +8,36 @@ Conversion Co.’s _Currency Converter API_ is a simple API that allows clients 
 ```
 CurrencyConversionAPI
 │   README.md (Instructions)
-|	Documentation.yaml (API Documentation)
-|	LICENSE (License Agreement)
+|   Documentation.yaml (API Documentation)
+|   LICENSE (License Agreement)
 │	
 └───CurrencyConversionService
 │   └───API
-|		| .htaccess
-|		| Request.php
-|		| Response.php
-|		| index.php
+|	| .htaccess
+|	| Request.php
+|	| Response.php
+|	| index.php
 │   └───CDN
-|	    └───Images (Country Flags)
-|	    └───vendor (Composer Dependencies)
-|		| AWSHandler.php (AWS Communication)
-|		| composer.json
-|		| composer.lock
+|	└───Images (Country Flags)
+|	└───vendor (Composer Dependencies)
+|	| AWSHandler.php (AWS Communication)
+|	| composer.json
+|	| composer.lock
 │   └───Controllers
-|		| AuthenticationController.php
-|		| ClientController.php
-|		| ConversionController.php
-|	└───Database
-|		| ConnectionManager.php
-|		| config.xml
-|		| currencyconversiondb.sql
-|	└───Logs
-|		| LogHandler.php
-|		| api-logs.log
-|		| desktop.ini
-|	└───Models
-|		| Client.php
-|		| Conversion.php
+|	| AuthenticationController.php
+|	| ClientController.php
+|	| ConversionController.php
+|   └───Database
+|	| ConnectionManager.php
+|	| config.xml
+|	| currencyconversiondb.sql
+|   └───Logs
+|	| LogHandler.php
+|	| api-logs.log
+|	| desktop.ini
+|   └───Models
+|	| Client.php
+|	| Conversion.php
 │   └───Token
 │       │ jwt.php
 ```
