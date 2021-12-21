@@ -58,7 +58,7 @@ composer require composer require aws/aws-sdk-php
 1. Download the project's .zip
 2. Copy the files into the server directory
 3. Upload the database file (CurrencyConverterAPI/CurrencyConversionService/Database/currencyconversiondb.sql) to your database server
-4. In CurrencyConverterAPI/CurrencyConversionService/CDN, add the following XML file **(name it aws-config.xml)**: 
+4. In CurrencyConverterAPI/CurrencyConversionService/CDN, add the following XML file **(name it aws_config.xml)**: 
 ```xml
 <?xml version="1.0"?>  
 <awsconnection> 
