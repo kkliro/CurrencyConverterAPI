@@ -161,3 +161,29 @@
 [2021-12-21 12:05:05am] - [INFO] - Updated real-time exchanges rates...
 [2021-12-21 12:05:05am] - [INFO] - Converted HKD -> USD
 [2021-12-21 12:05:06am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:39:15am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:39:15am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:39:15am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:39:15am] - [INFO] - Converted USD -> USD
+[2021-12-21 12:39:17am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:39:21am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:39:21am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:39:22am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:39:22am] - [INFO] - Converted USD -> HKD
+[2021-12-21 12:39:22am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:39:33am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:39:33am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:39:33am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:39:33am] - [INFO] - Converted USD -> USD
+[2021-12-21 12:39:34am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:39:39am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:39:40am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:39:40am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:39:40am] - [INFO] - Converted USD -> CNY
+[2021-12-21 12:39:40am] - [INFO] - Successfully added conversion to database.
+[2021-12-21 12:40:09am] - [ERROR] - No license key provided.
+[2021-12-21 12:40:18am] - [INFO] - Generated Token for [ID: 1, License Key: KEYABC123].
+[2021-12-21 12:40:18am] - [INFO] - Authenticated user [ID: 1].
+[2021-12-21 12:40:18am] - [INFO] - Updated real-time exchanges rates...
+[2021-12-21 12:40:18am] - [INFO] - Converted USD -> CAD
+[2021-12-21 12:40:19am] - [INFO] - Successfully added conversion to database.
